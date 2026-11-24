@@ -1,0 +1,31 @@
+:root{--bg:#0e0f14;--ink:#f1ede6;--soft:#a9a7b3;--a:#5b6c9d;--b:#1c2340}
+body[data-mood=sad]{--a:#4a6fa5;--b:#14213d}
+body[data-mood=romantic]{--a:#d4577a;--b:#3a0f2a}
+body[data-mood=happy]{--a:#f2b441;--b:#4a2d0a}
+body[data-mood=angry]{--a:#d9452b;--b:#2b0a08}
+body[data-mood=calm]{--a:#5fa99a;--b:#0d2a28}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Hind Siliguri",system-ui,sans-serif;line-height:1.6;transition:background .8s}
+.glow{position:fixed;inset:0;z-index:-1;background:radial-gradient(70% 60% at 50% 0%,var(--a) -40%,transparent 70%),linear-gradient(180deg,var(--b),var(--bg) 80%);opacity:.9;transition:all 1s}
+main{max-width:640px;margin:0 auto;padding:clamp(2rem,8vw,5rem) 1.25rem 4rem}
+h1{font-family:"Noto Serif Bengali",serif;font-weight:600;font-size:clamp(2rem,7vw,3.2rem);line-height:1.2;margin:0 0 .5rem}
+.sub{color:var(--soft);margin:0 0 1.75rem}
+textarea{width:100%;padding:1rem;border-radius:14px;border:1px solid #ffffff26;background:#ffffff0d;color:var(--ink);font:inherit;resize:vertical}
+textarea:focus,button:focus-visible,input:focus-visible{outline:2px solid var(--a);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin-top:.9rem}
+button{font:inherit;cursor:pointer;border-radius:999px;border:1px solid #ffffff33;background:transparent;color:var(--ink);padding:.5rem 1.1rem;transition:background .2s}
+button:hover{background:#ffffff14}
+#go{background:var(--a);border-color:var(--a);color:#101010;font-weight:500}
+#go:hover{filter:brightness(1.1);background:var(--a)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chips button{padding:.3rem .8rem;font-size:.9rem;color:var(--soft)}
+#result{margin-top:2.5rem;border-left:3px solid var(--a);padding-left:1.25rem}
+.label{color:var(--a);margin:0 0 .75rem;font-weight:500}
+blockquote{font-family:"Noto Serif Bengali",serif;font-size:clamp(1.3rem,4.5vw,1.75rem);line-height:1.7;margin:0}
+#quoteEn{color:var(--soft);font-style:italic;margin:.75rem 0 1.5rem}
+.player{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.player label{color:var(--soft);display:flex;gap:.5rem;align-items:center;font-size:.9rem}
+input[type=range]{accent-color:var(--a)}
+.note{color:var(--soft);font-size:.85rem;margin-top:1rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}

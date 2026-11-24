@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mon er Kotha – mood onujayi quote &amp; music</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500&family=Noto+Serif+Bengali:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-mood="calm">
+<div class="glow" aria-hidden="true"></div>
+<main>
+  <h1>Aj tomar mon kemon?</h1>
+  <p class="sub">Bangla, English ba Banglish – jemon ichchha likho. Ami quote ar gaan dibo.</p>
+
+  <textarea id="input" rows="4" placeholder="Jemon: aj mon onek kharap, kichu valo lagche na..."></textarea>
+  <div class="row">
+    <button id="go" type="button">Amar mon bujho</button>
+    <div class="chips" id="chips" role="group" aria-label="Nijer mood bachai koro"></div>
+  </div>
+
+  <section id="result" hidden aria-live="polite">
+    <p class="label" id="moodLabel"></p>
+    <blockquote id="quote"></blockquote>
+    <p id="quoteEn"></p>
+    <div class="player">
+      <button id="toggle" type="button">Gaan thamao</button>
+      <button id="another" type="button">Aro ekta quote</button>
+      <label>Volume <input id="vol" type="range" min="0" max="1" step="0.05" value="0.6"></label>
+    </div>
+    <p class="note" id="songNote"></p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
